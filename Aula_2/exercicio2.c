@@ -84,7 +84,7 @@ tAluno* leAluno(){
     float p3;
 
     printf("Nome: ");
-    scanf("%s", nome);
+    scanf("\n%[^\n]", nome);
     
     printf("Matricula: ");
     scanf("%d", &matricula);
