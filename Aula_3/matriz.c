@@ -36,14 +36,15 @@ int recuperaNLinhas (Matriz* mat){
     return mat->nlinhas;
 }
 
-/*Retorna a matriz transposta de mat
- * inputs: a matriz
- * output: a matriz transposta
- * pre-condicao: matriz mat existe
- * pos-condicao: mat não é modificada e matriz transposta existe
- */
 Matriz* transposta (Matriz* mat){
+    Matriz* transp = inicializaMatriz(mat->ncolunas, mat->nlinhas);
+    for(int i = 0; i < transp->nlinhas; i++){
+        for(int j = 0; j < transp->ncolunas; j++){
+            modificaElemento(transp, i, j, mat->tabela[j][i]);
+        }
+    }
 
+    return transp;
 }
 
 /*Retorna a matriz multiplicacao entre mat1 e mat2
