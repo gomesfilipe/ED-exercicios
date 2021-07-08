@@ -1,7 +1,5 @@
 #ifndef MATRIZ_H_
 #define MATRIZ_H_
-#include <stdio.h>
-#include <stdlib.h>
 
 //Tipo matriz (tipo opaco)
 //Estrutura interna do tipo deve ser definida na implementação do TAD

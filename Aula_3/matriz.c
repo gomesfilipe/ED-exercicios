@@ -1,4 +1,6 @@
 #include "matriz.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 struct matriz{
     int nlinhas;
@@ -14,7 +16,7 @@ Matriz* inicializaMatriz (int nlinhas, int ncolunas){
     matriz->tabela = (int**) malloc(sizeof(int*) * nlinhas);
     
     for(int i = 0; i < nlinhas; i++){
-        matriz->tabela[i] = (Matriz*) malloc(sizeof(Matriz) * ncolunas);
+        matriz->tabela[i] = (int*) malloc(sizeof(int) * ncolunas);
     }
 
     return matriz;
@@ -47,15 +49,25 @@ Matriz* transposta (Matriz* mat){
     return transp;
 }
 
-/*Retorna a matriz multiplicacao entre mat1 e mat2
- * inputs: as matrizes mat1 e mat2
- * output: a matriz multiplicação
- * pre-condicao: matrizes mat1 e mat2 existem, e o numero de colunas de mat1
- * correponde ao numero de linhas de mat2
- * pos-condicao: mat1 e mat2 não são modificadas e a matriz multiplicacao existe
- */
-Matriz* multiplicacao (Matriz* mat1, Matriz* mat2){
+// Função auxiliar para a função 'multiplicacao'. Não precisa declarar no .h pois é usado apenas na implementação.
+int multiplicaLinhaPorColuna(Matriz* mat1, Matriz* mat2, int linha, int coluna){
+    int result = 0;
+    for(int i = 0; i < mat1->ncolunas; i++){
+        result += mat1->tabela[linha][i] * mat2->tabela[i][coluna];
+    }
+    return result;
+}
 
+Matriz* multiplicacao (Matriz* mat1, Matriz* mat2){
+    Matriz *result = inicializaMatriz(mat1->nlinhas, mat2->ncolunas);
+
+    for(int i = 0; i < result->nlinhas; i++){
+        for(int j = 0; j < result->ncolunas; j++){
+            result->tabela[i][j] = multiplicaLinhaPorColuna(mat1, mat2, i, j);
+        }
+    }
+
+    return result;
 }
 
 void imprimeMatriz(Matriz* mat){
