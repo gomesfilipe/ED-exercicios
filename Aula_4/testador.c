@@ -64,7 +64,18 @@ int main(){
     printf("Lista matrizes transpostas:\n\n");
     printList(listaTransp);
 
-    removeElement(listaNormal, 1);
+    printf("Lista apos remover elementos:\n\n");
+    removeElement(listaNormal, 1); // Removendo primeiro da lista.
+    removeElement(listaNormal, 2); // Removendo elemento do meio.
+    removeElement(listaNormal, 2); // Removendo último elemento.
+    printList(listaNormal);
+
+    // Inserindo novos elementos na lista.
+    printf("Lista apos adicionar elementos novamente:\n\n");
+    insertElement(listaNormal, m1);
+    insertElement(listaNormal, m2);
+    insertElement(listaNormal, m3);
+    insertElement(listaNormal, m4);
     printList(listaNormal);
 
     destroyList(listaNormal);
@@ -78,7 +89,5 @@ int main(){
     destroiMatriz(transp3);
     destroiMatriz(transp4);
 
-    // printf("chegou aq");
-    // return 0;
     return 0;
 }

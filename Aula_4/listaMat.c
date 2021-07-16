@@ -63,7 +63,9 @@ void removeElement(List* list, int position){
             
             if(i == position){
                 free(aux);
-                previous->next = next;
+                if(i != 1){
+                    previous->next = next;
+                }
 
             } else{
                 previous = aux;
