@@ -9,14 +9,23 @@ Espero 3 arquivos de vocês (submetidos pelo Classroom):
 3) testador.c: Este arquivo contém a main que deve testar o seu TAD Lista de Matrizes. Deve-se fazer o seguinte:
 
 a. Gerar algumas matrizes para teste (umas 3 ou 4 matrizes já seria suficiente);
+
 b. Inicializar uma lista encadeada;
+
 c. Inserir as matrizes na lista;
+
 d. Inicializar outra lista encadeada;
+
 e. Inserir as matrizes transpostas na segunda lista encadeada;
+
 f. Imprima as listas e veja se estão corretas!!!
+
 g. Retire algumas matrizes para verificar se o retira está funcionando (retire da primeira posição, última posição e caso comum);
+
 h. Insira as matrizes novamente para verificar se o retira não “quebrou” a lista;
+
 i. Libere as listas!
+
 j. Libere as matrizes!
 k. Passe o valgrind para verificar se não há erros e/ou vazamento de memória.
 
