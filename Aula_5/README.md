@@ -1,0 +1,1 @@
+Implemente um TAD Lista Duplamente Encadeada SEM Sentinela (do que você quiser!). Envie os arquivos .c e .h do TAD e um arquivo .c que você utilizou para fazer os testes (cliente).
