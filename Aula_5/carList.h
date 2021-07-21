@@ -37,7 +37,4 @@ List* removeElement(List* list, char* key);
  **/
 void printList(List* list);
 
-//! RETIRAR
-List* searchElement(List* list, char* key);
-
 #endif

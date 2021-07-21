@@ -3,6 +3,11 @@
 #include "cars.h"
 #include "carList.h"
 
+/**
+ * O TAD referente a lista de carros não libera os tipos carros.
+ * Para esse exercício, deixei sob responsabilidade do programador liberar os carros da memória.
+ **/
+
 int main(){
     Car* car1 = createCar("Saveiro", "Volkswagen", 1982, 30000.00);
     Car* car2 = createCar("Hilux", "Toyota", 2021, 200000.00);
