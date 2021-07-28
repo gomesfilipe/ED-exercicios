@@ -20,3 +20,22 @@ int getMatricula(Aluno* aluno){
 float getCR(Aluno* aluno){
     return aluno->cr;
 }
+
+void imprimeAluno(Aluno* aluno){
+    printf("Nome: %s\n", aluno->nome);
+    printf("Matricula: %d\n", aluno->matricula);
+    printf("CR: %.2f\n", aluno->cr);
+}
+
+Aluno* criaAluno(char* nome, int matricula, float cr){
+    Aluno* aluno = (Aluno*) malloc(sizeof(Aluno));
+    aluno->nome = strdup(nome);
+    aluno->matricula = matricula;
+    aluno->cr = cr;
+    return aluno;
+}
+
+void destroiAluno(Aluno* aluno){
+    free(aluno->nome);
+    free(aluno);
+}

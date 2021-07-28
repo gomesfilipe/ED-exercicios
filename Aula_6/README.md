@@ -1,0 +1,1 @@
+Listas heterogêneas permitem o encadeamento de tipos diferentes de dados em uma mesma lista! Neste exercício, peço que vocês assistam os 3 vídeos sobre o assunto e façam a lista heterogênea usada como exemplo pela professora no vídeo. :-)

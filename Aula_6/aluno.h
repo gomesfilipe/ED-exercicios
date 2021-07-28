@@ -24,4 +24,24 @@ int getMatricula(Aluno* aluno);
  **/
 float getCR(Aluno* aluno);
 
+/**
+ * Imprime os dados de um aluno.
+ * @param aluno Aluno que terá seus dados impressos na tela.
+ **/
+void imprimeAluno(Aluno* aluno);
+
+/**
+ * Aloca espaço na memória para um aluno e o inicializa.
+ * @param nome Nome do aluno.
+ * @param matricula Matrícula do aluno.
+ * @param cr CR do aluno.
+ **/
+Aluno* criaAluno(char* nome, int matricula, float cr);
+
+/**
+ * Libera um aluno da memória.
+ * @param aluno Aluno que será desalocado da memória.
+ **/
+void destroiAluno(Aluno* aluno);
+
 #endif
