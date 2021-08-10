@@ -35,12 +35,69 @@ void destroiPilhaDupla(PilhaDupla* pilhaDupla){
     for(int i = pilhaDupla->pilha2.base; i >= pilhaDupla->pilha2.topo; i--){
         destroiProduto(pilhaDupla->produto[i]);
     }
+    free(pilhaDupla);
 }
 
-void push(){ // Insere.
-
+void push(PilhaDupla* pilhaDupla, Produto* produto, int numPilha){ // Insere.
+    // Verificando se a pilha está cheia (ou seja, se é possível inserir elementos).
+    if(pilhaDupla->pilha1.topo + 1 == pilhaDupla->pilha2.topo){
+        printf("Pilha cheia. Nao eh possivel inserir elementos.\n");
+        return;
+    }
+    
+    if(numPilha == 1){
+        pilhaDupla->pilha1.topo++;
+        pilhaDupla->produto[pilhaDupla->pilha1.topo] = produto;
+    
+    } else if(numPilha == 2){
+        pilhaDupla->pilha2.topo--;
+        pilhaDupla->produto[pilhaDupla->pilha2.topo] = produto;
+    
+    } else{
+        printf("Pilha %d não existe. Coloque uma pilha valida.\n", numPilha);
+    }
 }
 
-void pop(){ // Remove.
+void pop(PilhaDupla* pilhaDupla, int numPilha){ // Remove.
+    if(numPilha == 1){
+        // Verificando se é possível remover elementos.
+        if(pilhaDupla->pilha1.topo == -1){
+            printf("Nao ha elementos para retirar da pilha %d.\n", numPilha);
+            return;
+        
+        } else{
+            destroiProduto(pilhaDupla->produto[pilhaDupla->pilha1.topo]);
+            pilhaDupla->pilha1.topo--;
+        }
 
+
+    } else if(numPilha == 2){
+        // Verificando se é possível remover elementos.
+        if(pilhaDupla->pilha2.topo == MaxTam){
+            printf("Nao ha elementos para retirar da pilha %d.\n", numPilha);
+            return;
+        
+        } else{
+            destroiProduto(pilhaDupla->produto[pilhaDupla->pilha2.topo]);
+            pilhaDupla->pilha2.topo++;
+        }
+    } else{
+        printf("Pilha %d não existe. Coloque uma pilha valida.\n", numPilha);
+    }
+}
+
+void printPilha(PilhaDupla* pilhaDupla){
+    // Imprimindo pilha 1.
+    printf("Pilha 1:\n\n");
+    for(int i = pilhaDupla->pilha1.topo; i >= pilhaDupla->pilha1.base; i--){
+        imprimeProduto(pilhaDupla->produto[i]);
+        printf("\n");
+    }
+
+    // Imprimindo pilha 2.
+    printf("Pilha 2:\n\n");
+    for(int i = pilhaDupla->pilha2.topo; i <= pilhaDupla->pilha2.base; i++){
+        imprimeProduto(pilhaDupla->produto[i]);
+        printf("\n");
+    }
 }
