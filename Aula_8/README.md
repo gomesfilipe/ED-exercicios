@@ -1,0 +1,1 @@
+Implemente os TADs: Fila com Vetor e Fila com Lista, como explicado nos vídeos. A definição do TAD Fila (no arquivo .h) é a mesma para os dois tipos de implementação. Portanto, inclua no Classroom os seguintes arquivos: Fila.h, FilaComVetor.c, FilaComLista.c, Testador.c. O cliente testador pode ser o mesmo para as duas implementações. :-)
