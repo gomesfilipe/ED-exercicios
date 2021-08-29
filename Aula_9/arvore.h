@@ -24,10 +24,11 @@ Arvore* criaArvoreVazia();
 Arvore* criaArvore(Aluno* aluno, Arvore* left, Arvore* right);
 
 /**
- * @brief Libera uma árvore da memória.
+ * @brief Libera uma árvore da memória. Essa função apenas desfaz o encadeamento da árvore.
  * @param arvore Árvore que será liberada.
+ * @return Ponteiro NULL para a árvore que será liberada.
  **/
-void destroiArvore(Arvore* arvore);
+Arvore* destroiArvore(Arvore* arvore);
 
 /**
  * @brief Conta a quantidade de folhas de uma árvore.
@@ -50,5 +51,33 @@ int ocorrencias(Arvore* arvore, char* chave);
  * @return Altura da árvore.
  **/
 int altura(Arvore* arvore);
+
+/**
+ * @brief Função booleana, que diz se uma árvore é vazia ou não.
+ * @param arvore Árvore que será verificada.
+ * @return 1, caso seja vazia e 0, caso não seja vazia.
+ **/
+int ehArvoreVazia(Arvore* arvore);
+
+/**
+ * @brief Função booleana, que diz se uma árvore é folha ou não.
+ * @param arvore Árvore que será verificada.
+ * @return 1, caso seja folha e 0, caso não seja folha.
+ **/
+int ehFolha(Arvore* arvore);
+
+/**
+ * @brief Função booleana, que diz se um elemento pertence ou não a árvore.
+ * @param arvore Árvore que será verificada.
+ * @param chave Chave de busca do elemento, que neste caso é o nome do aluno.
+ * @return 1, caso o elemento pertença e 0, caso contrário.
+ **/
+int pertence(Arvore* arvore, char* chave);
+
+/**
+ * @brief Imprime os dados de uma árvore.
+ * @param arvore Árvore que será impressa.
+ **/
+void imprimeArvore(Arvore* arvore);
 
 #endif
