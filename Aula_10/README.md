@@ -1,0 +1,1 @@
+Implemente o TAD Árvore Binária de Busca discutido nos vídeos sobre o tema. Não esqueça de implementar a função de liberação da árvore! :-)
