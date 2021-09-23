@@ -7,6 +7,10 @@
 #define NPAL 64
 #define NTAB 127
 
+// Obs: passar nome do arquivo.txt na linha de comando.
+// Não fiz um tratamento muito rigoroso na leitura do arquivo, pois não é
+// o foco do exercício.
+
 /**
  * @brief Le uma palavra num arquivo.
  * @param f Ponteiro para o arquivo que contém a palavra que será lida.
