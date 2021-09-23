@@ -53,7 +53,7 @@ int conta_palavras_lista(Palavra* palavra){
 void imprime_lista_palavra(Palavra* palavra){
     Palavra* i;
     for(i = palavra; i != NULL; i = i->next){
-        printf("string: [%s] | ocorrencias: [%d]\n", palavra->string, palavra->ocorrencias);
+        printf("string: [%s] | ocorrencias: [%d]\n", i->string, i->ocorrencias);
     }
 }
 
