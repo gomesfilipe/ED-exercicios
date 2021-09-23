@@ -46,6 +46,8 @@ int main(int argc, char** argv){
 
     imprime_hash(hash);
 
+    printf("Quantidade de palavras na hash: [%d]\n", conta_palavras(hash));
+
     libera_hash(hash);
     fclose(f);
     return 0;
