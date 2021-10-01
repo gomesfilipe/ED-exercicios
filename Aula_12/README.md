@@ -1,0 +1,1 @@
+Implemente um TAD Genérico de qualquer estrutura de dados vista no curso (arquivo.h e arquivo.c). Forneça um cliente deste TAD Genérico (que pode ser outro TAD) que defina funções de callback para conseguir usar o TAD Genérico. Bom exercício!
