@@ -6,6 +6,7 @@
 #include <string.h>
 #include "produto.h"
 #include "pilha_generica.h"
+#include <math.h>
 
 typedef struct pilha Pilha;
 
@@ -93,6 +94,20 @@ float media_precos(Pilha* pilha);
 float media_custos(Pilha* pilha);
 
 /**
+ * @brief Calcula a variância de custos dos produtos de uma pilha.
+ * @param pilha Pilha que terá sua variância de custos calculada.
+ * @return Variância dos custos dos produtos.
+ **/
+float variancia_custos(Pilha* pilha);
+
+/**
+ * @brief Calcula a variância de precos dos produtos de uma pilha.
+ * @param pilha Pilha que terá sua variância de precos calculada.
+ * @return Variância dos precos dos produtos.
+ **/
+float variancia_precos(Pilha* pilha);
+
+/**
  * @brief Calcula o desvio padrão dos preços dos produtos de uma pilha.
  * @param pilha Pilha que terá sua desvio padrão dos preços calculada.
  * @return Desvio padrão dos preços dos produtos.
@@ -105,5 +120,19 @@ float desvio_padrao_precos(Pilha* pilha);
  * @return Desvio padrão dos custos dos produtos.
  **/
 float desvio_padrao_custos(Pilha* pilha);
+
+/**
+ * @brief Calcula o total do estoque de uma pilha.
+ * @param pilha Pilha que será percorrida.
+ * @return Quantidade de estoque total.
+ **/
+int qtd_estoque(Pilha* pilha);
+
+/**
+ * @brief Calcula a quantidade de produtos distintos de uma pilha.
+ * @param pilha Pilha que será percorrida.
+ * @return Quantidade de produtos distintos.
+ **/
+int qtd_produtos_distintos(Pilha* pilha);
 
 #endif

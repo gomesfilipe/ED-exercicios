@@ -1,4 +1,5 @@
 #include "pilha_generica.h"
+#include <math.h>
 
 struct pilha_gen{
     void* item;
