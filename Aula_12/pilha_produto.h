@@ -51,14 +51,6 @@ void imprime_pilha(Pilha* pilha);
 int pertence_pilha(Pilha* pilha, char* chave);
 
 /**
- * @brief Busca um produto numa lista.
- * @param pilha Pilha que será percorrida.
- * @param chave Nome do produto.
- * @return Ponteiro para o produto. Caso seja NULL, o produto não está na lista.
- **/
-Produto* busca_pilha(Pilha* pilha, char* chave);
-
-/**
  * @brief Verifica o total do custo de todos os produtos de uma pilha.
  * @param pilha Pilha que terá seu custo calculado.
  * @return Valor do custo.

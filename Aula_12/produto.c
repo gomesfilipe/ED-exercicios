@@ -60,7 +60,7 @@ void destroiProduto(Produto* produto){
 
 void imprimeProduto(Produto* produto){
     printf("Nome: %s\n", produto->nome);
-    printf("Custo: %.2f\n", produto->custo);
-    printf("Preco: %.2f\n", produto->preco);
-    printf("Estoque: %d\n", produto->estoque);
+    // printf("Custo: %.2f\n", produto->custo);
+    // printf("Preco: %.2f\n", produto->preco);
+    // printf("Estoque: %d\n", produto->estoque);
 }

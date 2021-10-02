@@ -18,7 +18,6 @@ void destroi_pilha_gen(Pilha_gen* pilha){
         i = i->next;
         free(aux);
     }
-    free(pilha);
 }
 
 Pilha_gen* push_gen(Pilha_gen* pilha, void* item){
@@ -41,8 +40,8 @@ int percorre_pilha_gen(Pilha_gen* pilha, fptr cb, void* dado){
     for(i = pilha; i != NULL; i = i->next){
         retorno = cb(i->item, dado); // Condição de parada do caminhamento na pilha depende do callback.
         if(retorno == 0){
-            return retorno;
+            return 0; // Houve interrupção.
         }
     }
-    return 1;
+    return 1; // Não houve interrupção
 }

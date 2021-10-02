@@ -21,15 +21,29 @@ Pilha* pop(Pilha_gen* pilha){
     return pop_gen(pilha); // O casting ocorre automaticamente.
 }
 
-void imprime_pilha(Pilha* pilha){
+static int imprime_produto(void* produto, void* dado){ // Adaptado para callback.
+    imprimeProduto(produto);
+    return 1; // Continuar no loop.
+}
 
+static int compara_nomes(void* produto, void* dado){
+    char* nomeProduto = getNome(produto);
+    return strcmp(nomeProduto, dado); // Iguais retorna 1, diferentes retorna 0.
+}
+
+void imprime_pilha(Pilha* pilha){
+    percorre_pilha_gen(pilha, imprime_produto, NULL);
 }
 
 int pertence_pilha(Pilha* pilha, char* chave){
+    return !percorre_pilha_gen(pilha, compara_nomes, chave);
+}
+
+float custo_total(Pilha* pilha){
 
 }
 
-Produto* busca_pilha(Pilha* pilha, char* chave){
+float venda_total(Pilha* pilha){
 
 }
 
@@ -38,14 +52,6 @@ float media_precos(Pilha* pilha){
 }
 
 float media_custos(Pilha* pilha){
-
-}
-
-float custo_total(Pilha* pilha){
-
-}
-
-float venda_total(Pilha* pilha){
 
 }
 
