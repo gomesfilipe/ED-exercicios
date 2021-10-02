@@ -58,7 +58,6 @@ int main(){
     printf("Media de preco dos produtos: [%.2f]\n", media_precos(pilha));
     printf("Media de custo dos produtos: [%.2f]\n\n", media_custos(pilha));
 
-    
     printf("Variancia de preco dos produtos: [%.2f]\n", variancia_precos(pilha));
     printf("Variancia de custo dos produtos: [%.2f]\n\n", variancia_custos(pilha));
 
